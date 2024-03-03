@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{CC8D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{8119BA18-3AE1-4EC3-95C1-EEA2DBE2F397}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 	EndProjectSection
 EndProject
@@ -22,7 +23,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dockerfiles", "dockerfiles"
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinDeskWebApiApp.UnitTests", "tests\CoinDeskWebApiApp.UnitTests\CoinDeskWebApiApp.UnitTests.csproj", "{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinDeskWebApiApp.UnitTests", "tests\CoinDeskWebApiApp.UnitTests\CoinDeskWebApiApp.UnitTests.csproj", "{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "manifests", "manifests", "{C67E6B2E-CF72-4192-BEC9-FD849D7FB49B}"
+	ProjectSection(SolutionItems) = preProject
+		manifests\configMap.yml = manifests\configMap.yml
+		manifests\deployment.yml = manifests\deployment.yml
+		manifests\service.yml = manifests\service.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

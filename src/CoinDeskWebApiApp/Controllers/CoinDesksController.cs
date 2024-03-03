@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoinDeskWebApiApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coindesks")]
     [ApiController]
     public class CoinDesksController : ControllerBase
     {
@@ -22,7 +22,8 @@ namespace CoinDeskWebApiApp.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("GetWithHttpClient")]
+        [HttpGet]
+        [Route("bitcoinrate")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetWithHttpClient()
@@ -39,7 +40,8 @@ namespace CoinDeskWebApiApp.Controllers
             }
         }
 
-        [HttpGet("GetWithIHttpClientFactory")]
+        [HttpGet]
+        [Route("bitcoinrate2")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetWithWithIHttpClientFactory()
@@ -56,7 +58,8 @@ namespace CoinDeskWebApiApp.Controllers
             }
         }
 
-        [HttpGet("GetWithIHttpClientFactoryWithNamedClient")]
+        [HttpGet]
+        [Route("bitcoinrate3")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetWithIHttpClientFactoryWithNamedClient()
@@ -73,8 +76,8 @@ namespace CoinDeskWebApiApp.Controllers
             }
         }
 
-        [Obsolete]
-        [HttpGet("GetWithHttpClientWithUsing")]
+        [HttpGet]
+        [Route("bitcoinrate4")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetWithHttpClientWithUsing()

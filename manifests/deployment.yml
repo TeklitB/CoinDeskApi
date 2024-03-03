@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-api-deployment
+spec:
+  selector:
+      matchLabels:
+        app: example-api
+  replicas: 2
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  template:
+      metadata:
+        labels:
+            app: example-api
+      spec:
+        containers:
+        - name: example-api
+          image:  my.azurecr.io/example:latest
+          ports:
+          - containerPort: 80
+          volumeMounts:
+          - name: appsettings-volume
+            mountPath: /app/appsettings.json
+            subPath: appsettings.json
+        volumes:
+        - name: appsettings-volume
+          configMap:
+             name: example-configmap
