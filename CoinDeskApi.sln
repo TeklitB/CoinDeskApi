@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinDeskWebApiApp", "src\CoinDeskWebApiApp\CoinDeskWebApiApp.csproj", "{94628DB0-0711-45D6-98A2-15C408C36C2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B520E695-7A5F-449B-9FDB-672288231CFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0556D805-81BF-4CA4-B5A5-478267670F16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{CC8D6D13-40CC-4E36-B8F9-FF1056AF85F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{8119BA18-3AE1-4EC3-95C1-EEA2DBE2F397}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dockerfiles", "dockerfiles", "{4AAF5261-17AE-4B51-A245-774630C5F929}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinDeskWebApiApp.UnitTests", "tests\CoinDeskWebApiApp.UnitTests\CoinDeskWebApiApp.UnitTests.csproj", "{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94628DB0-0711-45D6-98A2-15C408C36C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94628DB0-0711-45D6-98A2-15C408C36C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94628DB0-0711-45D6-98A2-15C408C36C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94628DB0-0711-45D6-98A2-15C408C36C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768CA1C6-7F6B-4D41-B4D1-010D83DEE233}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94628DB0-0711-45D6-98A2-15C408C36C2D} = {B520E695-7A5F-449B-9FDB-672288231CFC}
+		{8119BA18-3AE1-4EC3-95C1-EEA2DBE2F397} = {CC8D6D13-40CC-4E36-B8F9-FF1056AF85F9}
+		{768CA1C6-7F6B-4D41-B4D1-010D83DEE233} = {0556D805-81BF-4CA4-B5A5-478267670F16}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BCE200D-2F17-4184-B25A-C8A4561DAA0C}
+	EndGlobalSection
+EndGlobal

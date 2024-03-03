@@ -1,0 +1,8 @@
+.github
+.tests
+.git
+.vs
+README.md
+.gitignore
+**/[B|b]in/
+**/[O|o]bj/
